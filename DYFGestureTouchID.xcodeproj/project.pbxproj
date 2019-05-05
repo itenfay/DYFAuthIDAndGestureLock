@@ -1,0 +1,583 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		967CEBA81F29889600BE883B /* cat49334.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 967CEBA71F29889600BE883B /* cat49334.jpg */; };
+		96AED8051F39656900FF0D93 /* blueBack@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 96AED8021F39656900FF0D93 /* blueBack@2x.png */; };
+		96AED8061F39656900FF0D93 /* blueBack@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 96AED8031F39656900FF0D93 /* blueBack@3x.png */; };
+		96AED8071F39656900FF0D93 /* whiteBack@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 96AED8041F39656900FF0D93 /* whiteBack@2x.png */; };
+		96BEAEF51F33188200610B9B /* DYFLoadingObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 96BEAEF41F33188200610B9B /* DYFLoadingObject.m */; };
+		96E0ED241FD68F8700420F02 /* CALayer+Shake.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E0ED031FD68F8700420F02 /* CALayer+Shake.m */; };
+		96E0ED251FD68F8700420F02 /* UIButton+EdgeInsets.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E0ED051FD68F8700420F02 /* UIButton+EdgeInsets.m */; };
+		96E0ED261FD68F8700420F02 /* UIView+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E0ED071FD68F8700420F02 /* UIView+Ext.m */; };
+		96E0ED271FD68F8700420F02 /* DYFGestureTouchIDRes.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 96E0ED0B1FD68F8700420F02 /* DYFGestureTouchIDRes.bundle */; };
+		96E0ED281FD68F8700420F02 /* DYFSecurityHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E0ED0E1FD68F8700420F02 /* DYFSecurityHelper.m */; };
+		96E0ED291FD68F8700420F02 /* DYFCircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E0ED121FD68F8700420F02 /* DYFCircleView.m */; };
+		96E0ED2A1FD68F8700420F02 /* DYFGestureShapeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E0ED141FD68F8700420F02 /* DYFGestureShapeView.m */; };
+		96E0ED2B1FD68F8700420F02 /* DYFGestureView.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E0ED161FD68F8700420F02 /* DYFGestureView.m */; };
+		96E0ED2C1FD68F8700420F02 /* DYFLoginVerifyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E0ED191FD68F8700420F02 /* DYFLoginVerifyView.m */; };
+		96E0ED2D1FD68F8700420F02 /* DYFGestureSetController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E0ED1C1FD68F8700420F02 /* DYFGestureSetController.m */; };
+		96E0ED2E1FD68F8700420F02 /* DYFGestureTouchIDSettingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E0ED201FD68F8700420F02 /* DYFGestureTouchIDSettingCell.m */; };
+		96E0ED2F1FD68F8700420F02 /* DYFGestureTouchIDSettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E0ED231FD68F8700420F02 /* DYFGestureTouchIDSettingController.m */; };
+		96EFC2631F284A86008A2FA1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 96EFC23E1F284A86008A2FA1 /* AppDelegate.m */; };
+		96EFC2641F284A86008A2FA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96EFC23F1F284A86008A2FA1 /* Assets.xcassets */; };
+		96EFC2651F284A86008A2FA1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96EFC2401F284A86008A2FA1 /* LaunchScreen.storyboard */; };
+		96EFC2661F284A86008A2FA1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96EFC2421F284A86008A2FA1 /* Main.storyboard */; };
+		96EFC2681F284A86008A2FA1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 96EFC2451F284A86008A2FA1 /* main.m */; };
+		96EFC2691F284A86008A2FA1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96EFC2471F284A86008A2FA1 /* ViewController.m */; };
+		C7F7BAF2232E3DA77A62A4E8 /* libPods-DYFGestureTouchID.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BD124B035AA2FAB3113E73A /* libPods-DYFGestureTouchID.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		147FF033D48A62B2F87089A6 /* Pods-DYFGestureTouchID.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DYFGestureTouchID.debug.xcconfig"; path = "Target Support Files/Pods-DYFGestureTouchID/Pods-DYFGestureTouchID.debug.xcconfig"; sourceTree = "<group>"; };
+		7BD124B035AA2FAB3113E73A /* libPods-DYFGestureTouchID.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DYFGestureTouchID.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		960F929D1F21ABA0002367D4 /* DYFGestureTouchID.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DYFGestureTouchID.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		967CEBA71F29889600BE883B /* cat49334.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cat49334.jpg; sourceTree = "<group>"; };
+		96AED8021F39656900FF0D93 /* blueBack@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blueBack@2x.png"; sourceTree = "<group>"; };
+		96AED8031F39656900FF0D93 /* blueBack@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blueBack@3x.png"; sourceTree = "<group>"; };
+		96AED8041F39656900FF0D93 /* whiteBack@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "whiteBack@2x.png"; sourceTree = "<group>"; };
+		96BEAEF31F33188200610B9B /* DYFLoadingObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYFLoadingObject.h; sourceTree = "<group>"; };
+		96BEAEF41F33188200610B9B /* DYFLoadingObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYFLoadingObject.m; sourceTree = "<group>"; };
+		96E0ED021FD68F8700420F02 /* CALayer+Shake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+Shake.h"; sourceTree = "<group>"; };
+		96E0ED031FD68F8700420F02 /* CALayer+Shake.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+Shake.m"; sourceTree = "<group>"; };
+		96E0ED041FD68F8700420F02 /* UIButton+EdgeInsets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+EdgeInsets.h"; sourceTree = "<group>"; };
+		96E0ED051FD68F8700420F02 /* UIButton+EdgeInsets.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+EdgeInsets.m"; sourceTree = "<group>"; };
+		96E0ED061FD68F8700420F02 /* UIView+Ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Ext.h"; sourceTree = "<group>"; };
+		96E0ED071FD68F8700420F02 /* UIView+Ext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Ext.m"; sourceTree = "<group>"; };
+		96E0ED091FD68F8700420F02 /* DYFDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYFDefinition.h; sourceTree = "<group>"; };
+		96E0ED0B1FD68F8700420F02 /* DYFGestureTouchIDRes.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = DYFGestureTouchIDRes.bundle; sourceTree = "<group>"; };
+		96E0ED0D1FD68F8700420F02 /* DYFSecurityHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYFSecurityHelper.h; sourceTree = "<group>"; };
+		96E0ED0E1FD68F8700420F02 /* DYFSecurityHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYFSecurityHelper.m; sourceTree = "<group>"; };
+		96E0ED111FD68F8700420F02 /* DYFCircleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYFCircleView.h; sourceTree = "<group>"; };
+		96E0ED121FD68F8700420F02 /* DYFCircleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYFCircleView.m; sourceTree = "<group>"; };
+		96E0ED131FD68F8700420F02 /* DYFGestureShapeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYFGestureShapeView.h; sourceTree = "<group>"; };
+		96E0ED141FD68F8700420F02 /* DYFGestureShapeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYFGestureShapeView.m; sourceTree = "<group>"; };
+		96E0ED151FD68F8700420F02 /* DYFGestureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYFGestureView.h; sourceTree = "<group>"; };
+		96E0ED161FD68F8700420F02 /* DYFGestureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYFGestureView.m; sourceTree = "<group>"; };
+		96E0ED181FD68F8700420F02 /* DYFLoginVerifyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYFLoginVerifyView.h; sourceTree = "<group>"; };
+		96E0ED191FD68F8700420F02 /* DYFLoginVerifyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYFLoginVerifyView.m; sourceTree = "<group>"; };
+		96E0ED1B1FD68F8700420F02 /* DYFGestureSetController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYFGestureSetController.h; sourceTree = "<group>"; };
+		96E0ED1C1FD68F8700420F02 /* DYFGestureSetController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYFGestureSetController.m; sourceTree = "<group>"; };
+		96E0ED1F1FD68F8700420F02 /* DYFGestureTouchIDSettingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYFGestureTouchIDSettingCell.h; sourceTree = "<group>"; };
+		96E0ED201FD68F8700420F02 /* DYFGestureTouchIDSettingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYFGestureTouchIDSettingCell.m; sourceTree = "<group>"; };
+		96E0ED221FD68F8700420F02 /* DYFGestureTouchIDSettingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYFGestureTouchIDSettingController.h; sourceTree = "<group>"; };
+		96E0ED231FD68F8700420F02 /* DYFGestureTouchIDSettingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYFGestureTouchIDSettingController.m; sourceTree = "<group>"; };
+		96EFC23D1F284A86008A2FA1 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		96EFC23E1F284A86008A2FA1 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		96EFC23F1F284A86008A2FA1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		96EFC2411F284A86008A2FA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		96EFC2431F284A86008A2FA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		96EFC2441F284A86008A2FA1 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		96EFC2451F284A86008A2FA1 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		96EFC2461F284A86008A2FA1 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		96EFC2471F284A86008A2FA1 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		FDB2379E80E7C505464F42C6 /* Pods-DYFGestureTouchID.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DYFGestureTouchID.release.xcconfig"; path = "Target Support Files/Pods-DYFGestureTouchID/Pods-DYFGestureTouchID.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		960F929A1F21ABA0002367D4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7F7BAF2232E3DA77A62A4E8 /* libPods-DYFGestureTouchID.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6A53685D2CF2A9A4200A7DC9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7BD124B035AA2FAB3113E73A /* libPods-DYFGestureTouchID.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		960F92941F21ABA0002367D4 = {
+			isa = PBXGroup;
+			children = (
+				96E0ED001FD68F8700420F02 /* Classes */,
+				96E0ED1D1FD68F8700420F02 /* Settings */,
+				96EFC23C1F284A86008A2FA1 /* GestureTouchID */,
+				960F929E1F21ABA0002367D4 /* Products */,
+				6A53685D2CF2A9A4200A7DC9 /* Frameworks */,
+				B21C1000E0C8D2BAF1FC3CFA /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		960F929E1F21ABA0002367D4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				960F929D1F21ABA0002367D4 /* DYFGestureTouchID.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		96E0ED001FD68F8700420F02 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				96E0ED011FD68F8700420F02 /* Category */,
+				96E0ED081FD68F8700420F02 /* Header */,
+				96E0ED0A1FD68F8700420F02 /* Resource */,
+				96E0ED0C1FD68F8700420F02 /* Security */,
+				96E0ED0F1FD68F8700420F02 /* View */,
+				96E0ED1A1FD68F8700420F02 /* ViewController */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		96E0ED011FD68F8700420F02 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				96E0ED021FD68F8700420F02 /* CALayer+Shake.h */,
+				96E0ED031FD68F8700420F02 /* CALayer+Shake.m */,
+				96E0ED041FD68F8700420F02 /* UIButton+EdgeInsets.h */,
+				96E0ED051FD68F8700420F02 /* UIButton+EdgeInsets.m */,
+				96E0ED061FD68F8700420F02 /* UIView+Ext.h */,
+				96E0ED071FD68F8700420F02 /* UIView+Ext.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		96E0ED081FD68F8700420F02 /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				96E0ED091FD68F8700420F02 /* DYFDefinition.h */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
+		96E0ED0A1FD68F8700420F02 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				96E0ED0B1FD68F8700420F02 /* DYFGestureTouchIDRes.bundle */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		96E0ED0C1FD68F8700420F02 /* Security */ = {
+			isa = PBXGroup;
+			children = (
+				96E0ED0D1FD68F8700420F02 /* DYFSecurityHelper.h */,
+				96E0ED0E1FD68F8700420F02 /* DYFSecurityHelper.m */,
+			);
+			path = Security;
+			sourceTree = "<group>";
+		};
+		96E0ED0F1FD68F8700420F02 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				96E0ED101FD68F8700420F02 /* Gesture */,
+				96E0ED171FD68F8700420F02 /* Verify */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		96E0ED101FD68F8700420F02 /* Gesture */ = {
+			isa = PBXGroup;
+			children = (
+				96E0ED111FD68F8700420F02 /* DYFCircleView.h */,
+				96E0ED121FD68F8700420F02 /* DYFCircleView.m */,
+				96E0ED131FD68F8700420F02 /* DYFGestureShapeView.h */,
+				96E0ED141FD68F8700420F02 /* DYFGestureShapeView.m */,
+				96E0ED151FD68F8700420F02 /* DYFGestureView.h */,
+				96E0ED161FD68F8700420F02 /* DYFGestureView.m */,
+			);
+			path = Gesture;
+			sourceTree = "<group>";
+		};
+		96E0ED171FD68F8700420F02 /* Verify */ = {
+			isa = PBXGroup;
+			children = (
+				96E0ED181FD68F8700420F02 /* DYFLoginVerifyView.h */,
+				96E0ED191FD68F8700420F02 /* DYFLoginVerifyView.m */,
+			);
+			path = Verify;
+			sourceTree = "<group>";
+		};
+		96E0ED1A1FD68F8700420F02 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				96E0ED1B1FD68F8700420F02 /* DYFGestureSetController.h */,
+				96E0ED1C1FD68F8700420F02 /* DYFGestureSetController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		96E0ED1D1FD68F8700420F02 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				96E0ED1E1FD68F8700420F02 /* View */,
+				96E0ED211FD68F8700420F02 /* ViewController */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		96E0ED1E1FD68F8700420F02 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				96E0ED1F1FD68F8700420F02 /* DYFGestureTouchIDSettingCell.h */,
+				96E0ED201FD68F8700420F02 /* DYFGestureTouchIDSettingCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		96E0ED211FD68F8700420F02 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				96E0ED221FD68F8700420F02 /* DYFGestureTouchIDSettingController.h */,
+				96E0ED231FD68F8700420F02 /* DYFGestureTouchIDSettingController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		96EFC23C1F284A86008A2FA1 /* GestureTouchID */ = {
+			isa = PBXGroup;
+			children = (
+				96EFC23D1F284A86008A2FA1 /* AppDelegate.h */,
+				96EFC23E1F284A86008A2FA1 /* AppDelegate.m */,
+				96EFC2461F284A86008A2FA1 /* ViewController.h */,
+				96EFC2471F284A86008A2FA1 /* ViewController.m */,
+				96BEAEF31F33188200610B9B /* DYFLoadingObject.h */,
+				96BEAEF41F33188200610B9B /* DYFLoadingObject.m */,
+				96EFC2421F284A86008A2FA1 /* Main.storyboard */,
+				96EFC23F1F284A86008A2FA1 /* Assets.xcassets */,
+				96EFC2401F284A86008A2FA1 /* LaunchScreen.storyboard */,
+				96EFC2441F284A86008A2FA1 /* Info.plist */,
+				96EFC2731F284A94008A2FA1 /* Supporting Files */,
+			);
+			path = GestureTouchID;
+			sourceTree = "<group>";
+		};
+		96EFC2731F284A94008A2FA1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				96AED8021F39656900FF0D93 /* blueBack@2x.png */,
+				96AED8031F39656900FF0D93 /* blueBack@3x.png */,
+				96AED8041F39656900FF0D93 /* whiteBack@2x.png */,
+				967CEBA71F29889600BE883B /* cat49334.jpg */,
+				96EFC2451F284A86008A2FA1 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B21C1000E0C8D2BAF1FC3CFA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				147FF033D48A62B2F87089A6 /* Pods-DYFGestureTouchID.debug.xcconfig */,
+				FDB2379E80E7C505464F42C6 /* Pods-DYFGestureTouchID.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		960F929C1F21ABA0002367D4 /* DYFGestureTouchID */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 960F92B41F21ABA0002367D4 /* Build configuration list for PBXNativeTarget "DYFGestureTouchID" */;
+			buildPhases = (
+				BAB065B18DCBB245F5C3992E /* [CP] Check Pods Manifest.lock */,
+				960F92991F21ABA0002367D4 /* Sources */,
+				960F929A1F21ABA0002367D4 /* Frameworks */,
+				960F929B1F21ABA0002367D4 /* Resources */,
+				2DEEF35DC2E5DD9777F279E6 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DYFGestureTouchID;
+			productName = EZGestureTouchID;
+			productReference = 960F929D1F21ABA0002367D4 /* DYFGestureTouchID.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		960F92951F21ABA0002367D4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = Ez;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = Eastze;
+				TargetAttributes = {
+					960F929C1F21ABA0002367D4 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = ZJ6634EC36;
+						ProvisioningStyle = Manual;
+					};
+				};
+			};
+			buildConfigurationList = 960F92981F21ABA0002367D4 /* Build configuration list for PBXProject "DYFGestureTouchID" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				English,
+				en,
+				Base,
+			);
+			mainGroup = 960F92941F21ABA0002367D4;
+			productRefGroup = 960F929E1F21ABA0002367D4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				960F929C1F21ABA0002367D4 /* DYFGestureTouchID */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		960F929B1F21ABA0002367D4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96EFC2661F284A86008A2FA1 /* Main.storyboard in Resources */,
+				96AED8071F39656900FF0D93 /* whiteBack@2x.png in Resources */,
+				96E0ED271FD68F8700420F02 /* DYFGestureTouchIDRes.bundle in Resources */,
+				96AED8051F39656900FF0D93 /* blueBack@2x.png in Resources */,
+				967CEBA81F29889600BE883B /* cat49334.jpg in Resources */,
+				96EFC2641F284A86008A2FA1 /* Assets.xcassets in Resources */,
+				96AED8061F39656900FF0D93 /* blueBack@3x.png in Resources */,
+				96EFC2651F284A86008A2FA1 /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2DEEF35DC2E5DD9777F279E6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DYFGestureTouchID/Pods-DYFGestureTouchID-resources.sh",
+				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SVProgressHUD.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DYFGestureTouchID/Pods-DYFGestureTouchID-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BAB065B18DCBB245F5C3992E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DYFGestureTouchID-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		960F92991F21ABA0002367D4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96E0ED2F1FD68F8700420F02 /* DYFGestureTouchIDSettingController.m in Sources */,
+				96E0ED291FD68F8700420F02 /* DYFCircleView.m in Sources */,
+				96E0ED2A1FD68F8700420F02 /* DYFGestureShapeView.m in Sources */,
+				96E0ED2E1FD68F8700420F02 /* DYFGestureTouchIDSettingCell.m in Sources */,
+				96E0ED251FD68F8700420F02 /* UIButton+EdgeInsets.m in Sources */,
+				96EFC2691F284A86008A2FA1 /* ViewController.m in Sources */,
+				96E0ED2D1FD68F8700420F02 /* DYFGestureSetController.m in Sources */,
+				96BEAEF51F33188200610B9B /* DYFLoadingObject.m in Sources */,
+				96EFC2681F284A86008A2FA1 /* main.m in Sources */,
+				96E0ED2C1FD68F8700420F02 /* DYFLoginVerifyView.m in Sources */,
+				96E0ED281FD68F8700420F02 /* DYFSecurityHelper.m in Sources */,
+				96E0ED2B1FD68F8700420F02 /* DYFGestureView.m in Sources */,
+				96E0ED261FD68F8700420F02 /* UIView+Ext.m in Sources */,
+				96E0ED241FD68F8700420F02 /* CALayer+Shake.m in Sources */,
+				96EFC2631F284A86008A2FA1 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		96EFC2401F284A86008A2FA1 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				96EFC2411F284A86008A2FA1 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		96EFC2421F284A86008A2FA1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				96EFC2431F284A86008A2FA1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		960F92B21F21ABA0002367D4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		960F92B31F21ABA0002367D4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		960F92B51F21ABA0002367D4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 147FF033D48A62B2F87089A6 /* Pods-DYFGestureTouchID.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = ZJ6634EC36;
+				INFOPLIST_FILE = "$(SRCROOT)/GestureTouchID/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dyf.gesturetouchid;
+				PRODUCT_NAME = DYFGestureTouchID;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+			};
+			name = Debug;
+		};
+		960F92B61F21ABA0002367D4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FDB2379E80E7C505464F42C6 /* Pods-DYFGestureTouchID.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = ZJ6634EC36;
+				INFOPLIST_FILE = "$(SRCROOT)/GestureTouchID/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dyf.gesturetouchid;
+				PRODUCT_NAME = DYFGestureTouchID;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		960F92981F21ABA0002367D4 /* Build configuration list for PBXProject "DYFGestureTouchID" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				960F92B21F21ABA0002367D4 /* Debug */,
+				960F92B31F21ABA0002367D4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		960F92B41F21ABA0002367D4 /* Build configuration list for PBXNativeTarget "DYFGestureTouchID" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				960F92B51F21ABA0002367D4 /* Debug */,
+				960F92B61F21ABA0002367D4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 960F92951F21ABA0002367D4 /* Project object */;
+}
