@@ -104,7 +104,7 @@
 			children = (
 				96E0ED001FD68F8700420F02 /* Classes */,
 				96E0ED1D1FD68F8700420F02 /* Settings */,
-				96EFC23C1F284A86008A2FA1 /* GestureTouchID */,
+				96EFC23C1F284A86008A2FA1 /* DYFGestureTouchID */,
 				960F929E1F21ABA0002367D4 /* Products */,
 				6A53685D2CF2A9A4200A7DC9 /* Frameworks */,
 				B21C1000E0C8D2BAF1FC3CFA /* Pods */,
@@ -237,7 +237,7 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
-		96EFC23C1F284A86008A2FA1 /* GestureTouchID */ = {
+		96EFC23C1F284A86008A2FA1 /* DYFGestureTouchID */ = {
 			isa = PBXGroup;
 			children = (
 				96EFC23D1F284A86008A2FA1 /* AppDelegate.h */,
@@ -252,7 +252,7 @@
 				96EFC2441F284A86008A2FA1 /* Info.plist */,
 				96EFC2731F284A94008A2FA1 /* Supporting Files */,
 			);
-			path = GestureTouchID;
+			path = DYFGestureTouchID;
 			sourceTree = "<group>";
 		};
 		96EFC2731F284A94008A2FA1 /* Supporting Files */ = {
@@ -273,7 +273,6 @@
 				147FF033D48A62B2F87089A6 /* Pods-DYFGestureTouchID.debug.xcconfig */,
 				FDB2379E80E7C505464F42C6 /* Pods-DYFGestureTouchID.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -531,7 +530,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/GestureTouchID/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.dyf.gesturetouchid;
+				PRODUCT_BUNDLE_IDENTIFIER = com.asd.gesturetouchid;
 				PRODUCT_NAME = DYFGestureTouchID;
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -549,7 +548,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/GestureTouchID/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.dyf.gesturetouchid;
+				PRODUCT_BUNDLE_IDENTIFIER = com.asd.gesturetouchid;
 				PRODUCT_NAME = DYFGestureTouchID;
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
