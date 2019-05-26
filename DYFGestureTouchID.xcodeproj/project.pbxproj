@@ -527,7 +527,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = ZJ6634EC36;
-				INFOPLIST_FILE = "$(SRCROOT)/GestureTouchID/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/DYFGestureTouchID/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.asd.gesturetouchid;
@@ -545,7 +545,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = ZJ6634EC36;
-				INFOPLIST_FILE = "$(SRCROOT)/GestureTouchID/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/DYFGestureTouchID/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.asd.gesturetouchid;
