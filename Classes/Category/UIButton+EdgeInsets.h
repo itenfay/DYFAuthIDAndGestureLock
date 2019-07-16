@@ -16,6 +16,12 @@ typedef NS_ENUM(NSUInteger, ButtonEdgeInsetsStyle) {
 
 @interface UIButton (EdgeInsets)
 
-- (void)relayoutWithEdgeInsetsStyle:(ButtonEdgeInsetsStyle)style imageTitleSpace:(CGFloat)space;
+/**
+ 调整按钮图片和标题的位置
+ 
+ @param style EdgeInsets类型
+ @param space 图片和标题的空隙
+ */
+- (void)applyWithEdgeInsetsStyle:(ButtonEdgeInsetsStyle)style space:(CGFloat)space;
 
 @end

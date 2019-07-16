@@ -23,7 +23,7 @@
 @property (nonatomic) CGFloat centerX; // Shortcut for center.x.
 @property (nonatomic) CGFloat centerY; // Shortcut for center.y.
 @property (nonatomic) CGPoint origin;  // Shortcut for frame.origin.
-@property (nonatomic) CGSize size;     // Shortcut for frame.size.
+@property (nonatomic) CGSize  size;    // Shortcut for frame.size.
 
 /**
  *  View frame on the screen, taking into account scroll views.
@@ -96,7 +96,7 @@
 + (UINib *)loadNibNamed:(NSString *)nibName bundle:(NSBundle *)bundle;
 
 /**
- *  Gets the current class instance based on the Nib of the same name as the current class.
+ *  Get the current class instance based on the Nib of the same name as the current class.
  *
  *  @return The current class instance.
  */

@@ -218,7 +218,7 @@
 
 + (instancetype)loadInstanceFromNibWithName:(NSString *)nibName owner:(id)owner bundle:(NSBundle *)bundle {
     UIView *result = nil;
-    NSArray* elements = [bundle loadNibNamed:nibName owner:owner options:nil];
+    NSArray *elements = [bundle loadNibNamed:nibName owner:owner options:nil];
     for (id object in elements) {
         if ([object isKindOfClass:[self class]]) {
             result = object;

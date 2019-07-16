@@ -9,7 +9,7 @@
 
 @implementation UIButton (EdgeInsets)
 
-- (void)relayoutWithEdgeInsetsStyle:(ButtonEdgeInsetsStyle)style imageTitleSpace:(CGFloat)space {
+- (void)applyWithEdgeInsetsStyle:(ButtonEdgeInsetsStyle)style space:(CGFloat)space {
     CGFloat imageViewWidth = CGRectGetWidth(self.imageView.frame);
     CGFloat labelWidth = CGRectGetWidth(self.titleLabel.frame);
     
@@ -18,15 +18,15 @@
         labelWidth = titleSize.width;
     }
     
-    CGFloat imageInsetsTop = 0.0f;
-    CGFloat imageInsetsLeft = 0.0f;
+    CGFloat imageInsetsTop    = 0.0f;
+    CGFloat imageInsetsLeft   = 0.0f;
     CGFloat imageInsetsBottom = 0.0f;
-    CGFloat imageInsetsRight = 0.0f;
+    CGFloat imageInsetsRight  = 0.0f;
     
-    CGFloat titleInsetsTop = 0.0f;
-    CGFloat titleInsetsLeft = 0.0f;
+    CGFloat titleInsetsTop    = 0.0f;
+    CGFloat titleInsetsLeft   = 0.0f;
     CGFloat titleInsetsBottom = 0.0f;
-    CGFloat titleInsetsRight = 0.0f;
+    CGFloat titleInsetsRight  = 0.0f;
     
     switch (style) {
         case ButtonEdgeInsetsStyleImageRight:
