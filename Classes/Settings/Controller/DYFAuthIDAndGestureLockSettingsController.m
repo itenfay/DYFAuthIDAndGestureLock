@@ -2,7 +2,28 @@
 //  DYFAuthIDAndGestureLockSettingsController.m
 //
 //  Created by dyf on 2017/8/2.
-//  Copyright © 2017年 dyf. All rights reserved.
+//  Copyright © 2017 dyf. All rights reserved.
+//
+//  Permission is hereby granted, free of charge, to any person
+//  obtaining a copy of this software and associated documentation
+//  files (the "Software"), to deal in the Software without
+//  restriction, including without limitation the rights to use,
+//  copy, modify, merge, publish, distribute, sublicense, and/or sell
+//  copies of the Software, and to permit persons to whom the
+//  Software is furnished to do so, subject to the following
+//  conditions:
+//
+//  The above copyright notice and this permission notice shall be
+//  included in all copies or substantial portions of the Software.
+//
+//  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+//  EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+//  OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+//  NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+//  HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+//  WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+//  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+//  OTHER DEALINGS IN THE SOFTWARE.
 //
 
 #import "DYFAuthIDAndGestureLockSettingsController.h"
@@ -45,9 +66,6 @@
     UIButton *backButton = [[UIButton alloc] init];
     backButton.frame = CGRectMake(0, 0, 40, 40);
     [backButton setImage:[UIImage imageNamed:@"blueBack"] forState:UIControlStateNormal];
-    //backButton.titleLabel.font = [UIFont boldSystemFontOfSize:17.f];
-    //[backButton setTitle:@"返回" forState:UIControlStateNormal];
-    //[backButton setTitleColor:[UIColor colorWithRed:31/255.0 green:144/255.0 blue:230/255.0 alpha:1.0] forState:UIControlStateNormal];
     [backButton setShowsTouchWhenHighlighted:YES];
     [backButton addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];
     backButton.imageEdgeInsets = UIEdgeInsetsMake(3, -10, 3, 30);
@@ -59,11 +77,20 @@
 }
 
 - (void)back {
-    [self.navigationController popViewControllerAnimated:YES];
+    UINavigationController *nc = self.navigationController;
+    if (nc) {
+        if (nc.viewControllers.count == 1) {
+            [self dismissViewControllerAnimated:YES completion:NULL];
+        } else {
+            [nc popViewControllerAnimated:YES];
+        }
+    } else {
+        [self dismissViewControllerAnimated:YES completion:NULL];
+    }
 }
 
 - (BOOL)validateAppLockStatus {
-    BOOL isAuthIDOpen = [DYFSecurityHelper authIDOpen];
+    BOOL isAuthIDOpen  = [DYFSecurityHelper authIDOpen];
     BOOL isGestureOpen = [DYFSecurityHelper gestureCodeOpen];
     return self.isOwnedLock = (isAuthIDOpen || isGestureOpen);
 }
@@ -102,6 +129,7 @@
     static NSString *cellIdentifier = @"AGLSettingsCell";
     
     DYFAuthIDAndGestureLockSettingsCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    
     if (!cell) {
         cell = [[DYFAuthIDAndGestureLockSettingsCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
@@ -109,16 +137,21 @@
     [cell setNeedsLayout];
     
     if (indexPath.section == 0) {
+        
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         cell.m_textLabel.text = @"开启密码锁定";
         cell.m_switch.on = self.isOwnedLock;
         [cell.m_switch addTarget:self action:@selector(openPasscodeLock:) forControlEvents:UIControlEventValueChanged];
+        
     } else if (indexPath.section == 1) {
+        
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         cell.m_textLabel.text = DYFSecurityHelper.faceIDAvailable ? @"开启面容ID解锁" : @"开启Touch ID指纹解锁";
         cell.m_switch.on = [DYFSecurityHelper authIDOpen];
         [cell.m_switch addTarget:self action:@selector(openAuthID:) forControlEvents:UIControlEventValueChanged];
+        
     } else {
+        
         NSString *gestureCode = [DYFSecurityHelper getGestureCode];
         cell.m_textLabel.text = gestureCode.length > 0 ? @"重置手势密码" : @"设置手势密码";
         cell.m_switch.hidden = YES;
@@ -144,8 +177,9 @@
         @DYFWeakObject(self)
         [DYFSecurityHelper.sharedHelper evaluateAuthID:^(BOOL success, BOOL inputPassword, NSString *message) {
             if (success) {
-                [weak_self yf_showMessage:message];
                 [DYFSecurityHelper setAuthIDOpen:YES];
+                [weak_self yf_showMessage:message];
+                [weak_self autoReturnAfterDelay:1.2f];
             } else {
                 [weak_self yf_showMessage:message];
                 [weak_self.m_tableView reloadData];
@@ -171,6 +205,12 @@
         
         [self.navigationController pushViewController:vc animated:YES];
     }
+}
+
+- (void)autoReturnAfterDelay:(NSTimeInterval)delayInSeconds {
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self back];
+    });
 }
 
 - (void)didReceiveMemoryWarning {

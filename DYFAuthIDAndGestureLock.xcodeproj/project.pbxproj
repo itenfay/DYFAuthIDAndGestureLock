@@ -117,14 +117,14 @@
 			isa = PBXGroup;
 			children = (
 				1484F1F222DDA6B800933872 /* CALayer+Shake.h */,
-				1484F1F322DDA6B800933872 /* UIViewController+Message.m */,
-				1484F1F422DDA6B800933872 /* UIView+Ext.m */,
-				1484F1F522DDA6B800933872 /* UIButton+EdgeInsets.m */,
-				1484F1F622DDA6B800933872 /* UIImage+Additional.h */,
-				1484F1F722DDA6B800933872 /* UIButton+EdgeInsets.h */,
-				1484F1F822DDA6B800933872 /* UIView+Ext.h */,
-				1484F1F922DDA6B800933872 /* UIViewController+Message.h */,
 				1484F1FA22DDA6B800933872 /* CALayer+Shake.m */,
+				1484F1F722DDA6B800933872 /* UIButton+EdgeInsets.h */,
+				1484F1F522DDA6B800933872 /* UIButton+EdgeInsets.m */,
+				1484F1F822DDA6B800933872 /* UIView+Ext.h */,
+				1484F1F422DDA6B800933872 /* UIView+Ext.m */,
+				1484F1F922DDA6B800933872 /* UIViewController+Message.h */,
+				1484F1F322DDA6B800933872 /* UIViewController+Message.m */,
+				1484F1F622DDA6B800933872 /* UIImage+Additional.h */,
 				1484F1FB22DDA6B800933872 /* UIImage+Additional.m */,
 			);
 			path = Category;

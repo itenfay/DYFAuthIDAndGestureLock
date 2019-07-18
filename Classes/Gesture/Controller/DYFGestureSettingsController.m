@@ -2,7 +2,28 @@
 //  DYFGestureSettingsController.m
 //
 //  Created by dyf on 2017/7/24.
-//  Copyright © 2017年 dyf. All rights reserved.
+//  Copyright © 2017 dyf. All rights reserved.
+//
+//  Permission is hereby granted, free of charge, to any person
+//  obtaining a copy of this software and associated documentation
+//  files (the "Software"), to deal in the Software without
+//  restriction, including without limitation the rights to use,
+//  copy, modify, merge, publish, distribute, sublicense, and/or sell
+//  copies of the Software, and to permit persons to whom the
+//  Software is furnished to do so, subject to the following
+//  conditions:
+//
+//  The above copyright notice and this permission notice shall be
+//  included in all copies or substantial portions of the Software.
+//
+//  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+//  EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+//  OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+//  NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+//  HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+//  WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+//  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+//  OTHER DEALINGS IN THE SOFTWARE.
 //
 
 #import "DYFGestureSettingsController.h"
@@ -91,13 +112,11 @@
 // 导航Item的返回按钮
 - (UIButton *)backButton {
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-    
     button.backgroundColor = [UIColor clearColor];
     button.frame = CGRectMake(0, 0, 40, 40);
     [button setImage:DYFImageNamed(@"blue_back") forState:UIControlStateNormal];
-    [button addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];
+    [button addTarget:self action:@selector(backBtnClicked:) forControlEvents:UIControlEventTouchUpInside];
     button.imageEdgeInsets = UIEdgeInsetsMake(3, -10, 3, 30);
-    
     return button;
 }
 
@@ -175,9 +194,9 @@
 #pragma mark - action事件
 
 // 点击返回设置失败
-- (void)back {
+- (void)backBtnClicked:(UIButton *)sender {
     !self.completionHandler ?: self.completionHandler(NO);
-    [self popVC];
+    [self back];
 }
 
 #pragma mark - 对内方法
@@ -191,8 +210,9 @@
     self.messageLabel.textColor = DYFColorFromHex(0x000000, 1.f);
 }
 
-- (void)popVC {
-    [self.navigationController popViewControllerAnimated:YES];
+- (void)back {
+    UINavigationController *nc = self.navigationController;
+    [nc popViewControllerAnimated:YES];
 }
 
 // 手势密码的结果处理
@@ -219,12 +239,11 @@
                 [self yf_showMessage:@"设置成功"];
                 
                 dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.2f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                    [self popVC];
+                    [self back];
                 });
                 
                 return YES;
             }
-            
         }
         
         // 点数少于3 或者 前后不一致
@@ -238,7 +257,6 @@
             [self performSelector:@selector(resetGesture) withObject:nil afterDelay:1.0];
             
             return NO;
-            
         }
         
     } else if (self.gestureSettingsType == DYFGestureSettingsTypeDelete) {
@@ -249,7 +267,7 @@
             [DYFSecurityHelper setGestureCode:nil];
             
             !self.completionHandler ?: self.completionHandler(YES);
-            [self popVC];
+            [self back];
             
             return YES;
         }
@@ -265,7 +283,6 @@
         }
         
         return NO;
-        
     }
     
     return NO;
@@ -273,8 +290,9 @@
 
 // 验证原密码
 - (BOOL)verifyGestureCode:(NSString *)gestureCode {
-    NSString *gCode = [DYFSecurityHelper getGestureCode];
-    if ([gCode isEqualToString:gestureCode]) {
+    NSString *code = [DYFSecurityHelper getGestureCode];
+    
+    if ([code isEqualToString:gestureCode]) {
         return YES;
     } else {
         self.messageLabel.text = NSLocalizedString(kPromptPasswordErrorMessage, nil);

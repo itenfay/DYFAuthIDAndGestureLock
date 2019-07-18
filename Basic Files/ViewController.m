@@ -2,13 +2,13 @@
 //  ViewController.m
 //
 //  Created by dyf on 2017/7/21.
-//  Copyright © 2017年 dyf. All rights reserved.
+//  Copyright © 2017 dyf. All rights reserved.
 //
 
 #import "ViewController.h"
-#import "DYFSecurityHelper.h"
-#import "DYFAuthenticationView.h"
 #import "DYFAuthIDAndGestureLockSettingsController.h"
+#import "DYFAuthenticationView.h"
+#import "DYFSecurityHelper.h"
 
 @interface ViewController ()
 
@@ -24,16 +24,26 @@
 }
 
 - (IBAction)settingsAction:(id)sender {
+    static BOOL pushOrPresent = YES;
+    
     DYFAuthIDAndGestureLockSettingsController *vc = [[DYFAuthIDAndGestureLockSettingsController alloc] init];
-    [self.navigationController pushViewController:vc animated:YES];
+    if (pushOrPresent) {
+        [self.navigationController pushViewController:vc animated:YES];
+    } else {
+        // When presents view controller, please add navigation controller.
+        UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:vc];
+        [self presentViewController:nc animated:YES completion:NULL];
+    }
+    
+    pushOrPresent = !pushOrPresent;
 }
 
 - (IBAction)validationAction:(UIButton *)sender {
-    [self execureAuthentication];
+    [self executeAuthentication];
 }
 
-- (void)execureAuthentication {
-    BOOL isAuthIDOpen = [DYFSecurityHelper authIDOpen];
+- (void)executeAuthentication {
+    BOOL isAuthIDOpen      = [DYFSecurityHelper authIDOpen];
     BOOL isGestureCodeOpen = [DYFSecurityHelper gestureCodeOpen];
     if (!isAuthIDOpen && !isGestureCodeOpen) {
         return;
@@ -50,11 +60,13 @@
     
     [authView authenticateWithCompletion:^(BOOL success) {
         if (success) {
+            // 进行相应的操作
             NSLog(@"验证成功");
         }
     }];
     
     [authView loginOtherAccountWithCompletion:^{
+        // 进行其他账户登录操作
         NSLog(@"登录其他账户");
     }];
 }
