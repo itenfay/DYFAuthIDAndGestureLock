@@ -44,6 +44,6 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>NSFaceIDUsageDescription</key>
-	<string>验证面容ID，是否允许App访问？</string>
+	<string>验证Face ID，是否允许App访问？</string>
 </dict>
 </plist>

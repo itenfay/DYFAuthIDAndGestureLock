@@ -28,13 +28,9 @@
 
 #import "DYFAppLockConstant.h"
 
-// ID密码是否开启的key
 NSString *const kAuthIDOpen                 = @"kAuthIDOpen";
-// 手势密码是否开启的key
 NSString *const kGustureCodeOpen            = @"kGustureCodeOpen";
-// 手势密码记录的Key
 NSString *const kGustureCodeRecord          = @"kGustureCodeRecord";
-// 手势密码轨迹是否显示的key
 NSString *const kGustureCodeTrackShown      = @"kGustureCodeTrackShown";
 
 NSString *const kSetGustureCodeText         = @"设置手势密码";

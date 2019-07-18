@@ -21,9 +21,13 @@
 
 - 添加Face ID隐私 (Privacy)
 
+<div align=left>
+<img src="https://github.com/dgynfi/DYFAuthIDAndGestureLock/raw/master/images/faceid_privacy.png" width="50%" />
+</div>
+
 ```
 <key>NSFaceIDUsageDescription</key>
-<string>验证面容ID，是否允许App访问？</string>
+<string>验证Face ID，是否允许App访问？</string>
 ```
 
 - 导入头文件 (Import Header)
@@ -35,6 +39,8 @@
 ```
 
 - 手势密码和TouchID/FaceID设置 (Gesture Passcode and TouchID/FaceID Settings)
+
+&nbsp;&nbsp;支持push和模态两种场景过渡 (Supporting push or modal transition)
 
 ```
 - (IBAction)settingsAction:(id)sender {

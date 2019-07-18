@@ -53,7 +53,7 @@ FOUNDATION_EXPORT NSString *const kPromptSetAgainMessage;
 FOUNDATION_EXPORT NSString *const kPromptSetAgainErrorMessage;
 // 请输入原手势密码
 FOUNDATION_EXPORT NSString *const kPromptChangeGestureMessage;
-// 密码太短，至少3位，请重新设置"
+// 密码太短，至少3位，请重新设置
 FOUNDATION_EXPORT NSString *const kPromptPointShortMessage;
 // 手势密码错误
 FOUNDATION_EXPORT NSString *const kPromptPasswordErrorMessage;
