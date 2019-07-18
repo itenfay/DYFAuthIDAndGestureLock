@@ -122,31 +122,30 @@
 
 // 根据验证类型布局UI
 - (void)layoutUI:(DYFAuthenticationType)authType {
-    self.alpha = 0.5f;
+    self.alpha           = 0.5f;
     self.backgroundColor = [UIColor whiteColor];
     
-    // 顶部的头像和底部的切换登录方式按钮是共有的
     // 头像
     if (!_avatarImageView) {
-        CGFloat posX = (DYFScreenWidth - AvatarWH) * 0.5;
+        CGFloat posX     = (DYFScreenWidth - AvatarWH)/2;
         _avatarImageView = [[UIImageView alloc] initWithFrame:CGRectMake(posX, MarginTop, AvatarWH, AvatarWH)];
-        //_avatarImageView.contentMode = UIViewContentModeScaleToFill;
+        _avatarImageView.contentMode = UIViewContentModeScaleToFill;
     }
     UIImage *originAvatarImg = DYFImageNamed(@"default_avatar");
-    _avatarImageView.image = [originAvatarImg yf_circleImage];
+    _avatarImageView.image   = [originAvatarImg yf_circleImage];
     [self addSubview:_avatarImageView];
     
     // 底部按钮
     if (!_bottomButton) {
-        CGFloat posY = DYFScreenHeight - BottomHeight * 1.2;
-        _bottomButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        CGFloat posY                  = DYFScreenHeight - 1.2*BottomHeight;
+        _bottomButton                 = [UIButton buttonWithType:UIButtonTypeCustom];
         _bottomButton.backgroundColor = [UIColor clearColor];
-        _bottomButton.frame = CGRectMake(0.0, posY, DYFScreenWidth, BottomHeight);
-        _bottomButton.titleLabel.font = [UIFont boldSystemFontOfSize:15.0];
-        [_bottomButton setTitleColor:DYFColorFromHex(0x3393F2, 1.0) forState:UIControlStateNormal];
+        _bottomButton.frame           = CGRectMake(0, posY, DYFScreenWidth, BottomHeight);
+        _bottomButton.titleLabel.font = [UIFont boldSystemFontOfSize:15.f];
+        [_bottomButton setTitleColor:DYFColorFromHex(0x3393F2, 1.f) forState:UIControlStateNormal];
         [_bottomButton setTitle:@"登录其他账户" forState:UIControlStateNormal];
     }
-    [_bottomButton addTarget:self action:@selector(bottomButtonAction:) forControlEvents:UIControlEventTouchUpInside];
+    [_bottomButton addTarget:self action:@selector(bottomButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:_bottomButton];
     
     switch (authType) {
@@ -166,9 +165,12 @@
 // 指纹/面容解锁
 - (void)executeAuthIDUnlock {
     if (!_XIDButton) {
-        CGFloat posY = CGRectGetMaxY(_avatarImageView.frame) + XIDHeight;
-        UIButton *XIDButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        XIDButton.frame = CGRectMake(DYFScreenWidth/4.f, posY, DYFScreenWidth/2.f, XIDHeight);
+        CGFloat posY              = CGRectGetMaxY(_avatarImageView.frame) + XIDHeight;
+        
+        UIButton *XIDButton       = [UIButton buttonWithType:UIButtonTypeCustom];
+        XIDButton.frame           = CGRectMake(DYFScreenWidth/4.f, posY, DYFScreenWidth/2.f, XIDHeight);
+        XIDButton.titleLabel.font = [UIFont systemFontOfSize:14.f];
+        
         if (DYFSecurityHelper.faceIDAvailable) {
             [XIDButton setImage:DYFImageNamed(@"faceID") forState:UIControlStateNormal];
             [XIDButton setTitle:@"点击进行面容解锁" forState:UIControlStateNormal];
@@ -176,9 +178,10 @@
             [XIDButton setImage:DYFImageNamed(@"fingerprint") forState:UIControlStateNormal];
             [XIDButton setTitle:@"点击进行指纹解锁" forState:UIControlStateNormal];
         }
-        XIDButton.titleLabel.font = [UIFont systemFontOfSize:14.f];
+        
         [XIDButton setTitleColor:DYFColorFromHex(0x3393F2, 1.0) forState:UIControlStateNormal];
         [XIDButton applyWithEdgeInsetsStyle:ButtonEdgeInsetsStyleImageTop space:10.f];
+        
         _XIDButton = XIDButton;
     }
     [_XIDButton addTarget:self action:@selector(authIDButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
@@ -208,7 +211,7 @@
         _gestureView = [[DYFGestureView alloc] initWithFrame:CGRectMake(gestureViewX, gestureViewY, DYFGestureWH, DYFGestureWH)];
     }
     
-    //是否显示指示手势划过的方向箭头
+    // 是否显示指示手势划过的方向箭头
     _gestureView.hideGesturePath = NO;
     [self addSubview:_gestureView];
     
@@ -224,8 +227,8 @@
 - (BOOL)gestureResult:(NSString *)gestureCode {
     if (gestureCode.length >= 3) {
         // 验证原密码
-        NSString *saveGestureCode = [DYFSecurityHelper getGestureCode];
-        if ([gestureCode isEqualToString:saveGestureCode]) {
+        NSString *savedGestureCode = [DYFSecurityHelper getGestureCode];
+        if ([gestureCode isEqualToString:savedGestureCode]) {
             // 验证成功 进行进一步处理
             [self dismiss];
             return YES;
@@ -241,7 +244,7 @@
 
 // 手势密码错误的提示
 - (void)showGestureCodeErrorMessage {
-    self.messageLabel.text = kPasswordErrorMessage;
+    self.messageLabel.text      = kPasswordErrorMessage;
     self.messageLabel.textColor = CircleErrorColor;
     [self.messageLabel.layer shake];
 }
@@ -265,17 +268,16 @@
     
     self.touchBtnClick = YES;
     
-    @DYFWeakObject(self)
-    [DYFSecurityHelper.sharedHelper evaluateAuthID:^(BOOL success, BOOL inputPassword, NSString *message) {
-        weak_self.touchBtnClick = NO;
+    [DYFSecurityHelper.sharedHelper evaluateAuthID:^(BOOL success, BOOL shouldEnterPassword, NSString *message) {
+        self.touchBtnClick = NO;
         if (success) {
-            [weak_self dismiss];
+            [self dismiss];
         }
     }];
 }
 
 // 登录其他账户
-- (void)bottomButtonAction:(UIButton *)sender {
+- (void)bottomButtonClicked:(UIButton *)sender {
     if (self.bottomBtnClick) {
         return;
     }

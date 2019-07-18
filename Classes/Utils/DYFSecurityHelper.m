@@ -41,12 +41,10 @@
 // 单例
 + (instancetype)sharedHelper {
     static DYFSecurityHelper *_inst = nil;
-    
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         _inst = [[[self class] alloc] init];
     });
-    
     return _inst;
 }
 
@@ -156,21 +154,28 @@
 }
 
 - (void)evaluateWithPolicy:(LAPolicy)policy completion:(DYFAuthIDEvaluationBlock)completion {
-    LAContext *context = [[LAContext alloc] init];
-    context.localizedFallbackTitle = @"验证登录密码";
-    NSString *localizedReason = DYFSecurityHelper.faceIDAvailable ? @"验证面容ID" : @"通过Home键验证指纹";
+    LAContext *context             = [[LAContext alloc] init];
+    
+    context.localizedFallbackTitle = @"密码解锁";
+    context.localizedCancelTitle   = @"取消";
+    
+    NSString *localizedReason      = DYFSecurityHelper.faceIDAvailable ? @"验证FaceID，进入应用" : @"验证Touch ID，进入应用";
+    
     [context evaluatePolicy:policy localizedReason:localizedReason reply:^(BOOL success, NSError * _Nullable error) {
         
         dispatch_async(dispatch_get_main_queue(), ^{
+            
             NSString *message = @"";
             
             if (success) {
-                message = @"通过Touch ID指纹验证";
-                completion(YES, NO, message);
+                message = DYFSecurityHelper.faceIDAvailable ? @"通过Face ID验证" : @"通过Touch ID验证";
+                !completion ?: completion(YES, NO, message);
             } else {
-                BOOL inputPassword = NO;
+                BOOL shouldEnterPassword = NO;
+                
                 // Error
                 LAError errorCode = error.code;
+                
                 switch (errorCode) {
                     case LAErrorAuthenticationFailed: {
                         message = @"信息不匹配";
@@ -179,56 +184,57 @@
                         
                     case LAErrorUserCancel: {
                         message = @"您已取消";
+                        [self evaluateWithPolicy:self.devicePolicy completion:completion];
                     }
                         break;
                         
                     case LAErrorUserFallback: {
-                        inputPassword = YES;
+                        shouldEnterPassword = YES;
                         message = @"您选择输入密码";
                     }
                         break;
                         
                     case LAErrorSystemCancel: {
-                        // 对话框被系统取消，例如按下Home或者电源键
+                        // 对话框被系统取消，如按下Home键或电源键
                         message = @"取消授权，如其他应用切入";
                     }
                         break;
                         
-                    case LAErrorPasscodeNotSet: {
-                        message = @"设备系统未设置密码";
+                    case LAErrorAppCancel: {
+                        // 如突然来了电话，电话应用进入前台，APP被挂起
+                        message = @"APP被挂起，如来了电话";
                     }
                         break;
                         
-                    case LAErrorAppCancel: {
-                        // 如突然来了电话，电话应用进入前台，APP被挂起啦
-                        message = @"App被系统挂起";
+                    case LAErrorPasscodeNotSet: {
+                        message = @"未设置设备系统密码";
                     }
                         break;
                         
                     default:
                     case LAErrorInvalidContext: {
-                        message = @"验证失败，请重试";
+                        message = @"无效的验证";
                     }
                         break;
                         
 #if __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_11_0
                     case LAErrorBiometryNotAvailable: {
-                        message = DYFSecurityHelper.faceIDAvailable ? @"面容ID不可用" : @"此设备不支持Touch ID";
+                        message = DYFSecurityHelper.faceIDAvailable ? @"Face ID不可用" : @"Touch ID不可用";
                     }
                         break;
                         
                     case LAErrorBiometryNotEnrolled: {
-                        message = DYFSecurityHelper.faceIDAvailable ? @"面容ID未录入" : @"指纹未录入";
+                        message = DYFSecurityHelper.faceIDAvailable ? @"Face ID未录入" : @"指纹未录入";
                     }
                         break;
                         
                     case LAErrorBiometryLockout: {
-                        message = DYFSecurityHelper.faceIDAvailable ? @"面容ID被锁，需要输入密码解锁" : @"Touch ID被锁，需要输入密码解锁";
+                        message = DYFSecurityHelper.faceIDAvailable ? @"Face ID被锁，需要输入密码解锁" : @"Touch ID被锁，需要输入密码解锁";
                     }
                         break;
 #else
                     case LAErrorTouchIDNotAvailable: {
-                        message = @"此设备不支持Touch ID";
+                        message = @"Touch ID不可用";
                     }
                         break;
                         
@@ -238,14 +244,18 @@
                         break;
                         
                     case LAErrorTouchIDLockout: {
-                        // 连续五次指纹识别错误，TouchID功能被锁定，下一次需要输入系统密码
+                        // 连续2次指纹识别错误，TouchID功能被锁定，下一次需要输入系统密码
                         message = @"Touch ID被锁，需要输入密码解锁";
                     }
                         break;
 #endif
                 }
                 
-                completion(success, inputPassword, message);
+#if DEBUG
+                NSLog(@"[LAError] code: %zi, message: %@", errorCode, message);
+#endif
+                
+                !completion ?: completion(success, shouldEnterPassword, message);
             }
         });
         

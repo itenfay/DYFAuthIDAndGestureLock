@@ -19,13 +19,19 @@
 
 ## 使用说明
 
+- 添加Face ID隐私 (Privacy)
+
+```
+<key>NSFaceIDUsageDescription</key>
+<string>验证面容ID，是否允许App访问？</string>
+```
+
 - 导入头文件 (Import Header)
 
 ```
 #import "DYFAuthIDAndGestureLockSettingsController.h"
 #import "DYFAuthenticationView.h"
 #import "DYFSecurityHelper.h"
-
 ```
 
 - 手势密码和TouchID/FaceID设置 (Gesture Passcode and TouchID/FaceID Settings)
