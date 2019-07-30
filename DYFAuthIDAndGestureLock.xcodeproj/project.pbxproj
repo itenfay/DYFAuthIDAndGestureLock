@@ -13,7 +13,7 @@
 		1484F21522DDA6B900933872 /* UIView+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = 1484F1F422DDA6B800933872 /* UIView+Ext.m */; };
 		1484F21622DDA6B900933872 /* UIButton+EdgeInsets.m in Sources */ = {isa = PBXBuildFile; fileRef = 1484F1F522DDA6B800933872 /* UIButton+EdgeInsets.m */; };
 		1484F21722DDA6B900933872 /* CALayer+Shake.m in Sources */ = {isa = PBXBuildFile; fileRef = 1484F1FA22DDA6B800933872 /* CALayer+Shake.m */; };
-		1484F21822DDA6B900933872 /* UIImage+Additional.m in Sources */ = {isa = PBXBuildFile; fileRef = 1484F1FB22DDA6B800933872 /* UIImage+Additional.m */; };
+		1484F21822DDA6B900933872 /* UIImage+Circular.m in Sources */ = {isa = PBXBuildFile; fileRef = 1484F1FB22DDA6B800933872 /* UIImage+Circular.m */; };
 		1484F21922DDA6B900933872 /* DYFAuthenticationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1484F1FE22DDA6B900933872 /* DYFAuthenticationView.m */; };
 		1484F21A22DDA6B900933872 /* DYFGestureSettingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1484F20222DDA6B900933872 /* DYFGestureSettingsController.m */; };
 		1484F21B22DDA6B900933872 /* DYFCircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1484F20722DDA6B900933872 /* DYFCircleView.m */; };
@@ -36,6 +36,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1426B4A522F03522008286CC /* DYFAppLock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYFAppLock.h; sourceTree = "<group>"; };
 		1484F1EA22DDA6B700933872 /* DYFSecurityHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYFSecurityHelper.h; sourceTree = "<group>"; };
 		1484F1EB22DDA6B700933872 /* DYFSecurityHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYFSecurityHelper.m; sourceTree = "<group>"; };
 		1484F1EC22DDA6B800933872 /* DYFAppLockDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYFAppLockDefines.h; sourceTree = "<group>"; };
@@ -46,12 +47,12 @@
 		1484F1F322DDA6B800933872 /* UIViewController+Message.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Message.m"; sourceTree = "<group>"; };
 		1484F1F422DDA6B800933872 /* UIView+Ext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Ext.m"; sourceTree = "<group>"; };
 		1484F1F522DDA6B800933872 /* UIButton+EdgeInsets.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+EdgeInsets.m"; sourceTree = "<group>"; };
-		1484F1F622DDA6B800933872 /* UIImage+Additional.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Additional.h"; sourceTree = "<group>"; };
+		1484F1F622DDA6B800933872 /* UIImage+Circular.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Circular.h"; sourceTree = "<group>"; };
 		1484F1F722DDA6B800933872 /* UIButton+EdgeInsets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+EdgeInsets.h"; sourceTree = "<group>"; };
 		1484F1F822DDA6B800933872 /* UIView+Ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Ext.h"; sourceTree = "<group>"; };
 		1484F1F922DDA6B800933872 /* UIViewController+Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Message.h"; sourceTree = "<group>"; };
 		1484F1FA22DDA6B800933872 /* CALayer+Shake.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+Shake.m"; sourceTree = "<group>"; };
-		1484F1FB22DDA6B800933872 /* UIImage+Additional.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Additional.m"; sourceTree = "<group>"; };
+		1484F1FB22DDA6B800933872 /* UIImage+Circular.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Circular.m"; sourceTree = "<group>"; };
 		1484F1FD22DDA6B900933872 /* DYFAuthenticationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYFAuthenticationView.h; sourceTree = "<group>"; };
 		1484F1FE22DDA6B900933872 /* DYFAuthenticationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYFAuthenticationView.m; sourceTree = "<group>"; };
 		1484F20122DDA6B900933872 /* DYFGestureSettingsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYFGestureSettingsController.h; sourceTree = "<group>"; };
@@ -124,8 +125,8 @@
 				1484F1F422DDA6B800933872 /* UIView+Ext.m */,
 				1484F1F922DDA6B800933872 /* UIViewController+Message.h */,
 				1484F1F322DDA6B800933872 /* UIViewController+Message.m */,
-				1484F1F622DDA6B800933872 /* UIImage+Additional.h */,
-				1484F1FB22DDA6B800933872 /* UIImage+Additional.m */,
+				1484F1F622DDA6B800933872 /* UIImage+Circular.h */,
+				1484F1FB22DDA6B800933872 /* UIImage+Circular.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -237,6 +238,7 @@
 				1484F1FC22DDA6B900933872 /* Authentication */,
 				1484F1EE22DDA6B800933872 /* Base */,
 				1484F1F122DDA6B800933872 /* Category */,
+				1426B4A522F03522008286CC /* DYFAppLock.h */,
 				1484F1ED22DDA6B800933872 /* DYFAppLockConstant.h */,
 				1484F21122DDA6B900933872 /* DYFAppLockConstant.m */,
 				1484F1EC22DDA6B800933872 /* DYFAppLockDefines.h */,
@@ -359,7 +361,7 @@
 				1484F22022DDA6B900933872 /* DYFAppLockConstant.m in Sources */,
 				96EFC2691F284A86008A2FA1 /* ViewController.m in Sources */,
 				1484F21F22DDA6B900933872 /* DYFAuthIDAndGestureLockSettingsCell.m in Sources */,
-				1484F21822DDA6B900933872 /* UIImage+Additional.m in Sources */,
+				1484F21822DDA6B900933872 /* UIImage+Circular.m in Sources */,
 				1484F21722DDA6B900933872 /* CALayer+Shake.m in Sources */,
 				1484F21222DDA6B900933872 /* DYFSecurityHelper.m in Sources */,
 				1484F21C22DDA6B900933872 /* DYFGestureShapeView.m in Sources */,

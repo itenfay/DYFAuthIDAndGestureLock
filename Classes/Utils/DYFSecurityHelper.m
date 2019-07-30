@@ -155,12 +155,9 @@
 
 - (void)evaluateWithPolicy:(LAPolicy)policy completion:(DYFAuthIDEvaluationBlock)completion {
     LAContext *context             = [[LAContext alloc] init];
-    
     context.localizedFallbackTitle = @"密码解锁";
     context.localizedCancelTitle   = @"取消";
-    
     NSString *localizedReason      = DYFSecurityHelper.faceIDAvailable ? @"验证FaceID，进入应用" : @"验证Touch ID，进入应用";
-    
     [context evaluatePolicy:policy localizedReason:localizedReason reply:^(BOOL success, NSError * _Nullable error) {
         
         dispatch_async(dispatch_get_main_queue(), ^{
@@ -184,7 +181,6 @@
                         
                     case LAErrorUserCancel: {
                         message = @"您已取消";
-                        [self evaluateWithPolicy:self.devicePolicy completion:completion];
                     }
                         break;
                         

@@ -32,7 +32,7 @@
 #import "UIView+Ext.h"
 #import "CALayer+Shake.h"
 #import "UIButton+EdgeInsets.h"
-#import "UIImage+Additional.h"
+#import "UIImage+Circular.h"
 
 #import "DYFGestureView.h"
 #import "DYFCircleView.h"

@@ -6,9 +6,7 @@
 //
 
 #import "ViewController.h"
-#import "DYFAuthIDAndGestureLockSettingsController.h"
-#import "DYFAuthenticationView.h"
-#import "DYFSecurityHelper.h"
+#import "DYFAppLock.h"
 
 @interface ViewController ()
 

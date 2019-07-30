@@ -29,7 +29,7 @@ pod 'DYFAuthIDAndGestureLock', '~> 1.0.0'
 
 ## 使用说明
 
-- 添加Face ID隐私 (Privacy)
+- 添加Face ID隐私 (Add Privacy)
 
 <div align=left>
 <img src="https://github.com/dgynfi/DYFAuthIDAndGestureLock/raw/master/images/faceid_privacy.png" width="50%" />
@@ -43,14 +43,12 @@ pod 'DYFAuthIDAndGestureLock', '~> 1.0.0'
 - 导入头文件 (Import Header)
 
 ```
-#import "DYFAuthIDAndGestureLockSettingsController.h"
-#import "DYFAuthenticationView.h"
-#import "DYFSecurityHelper.h"
+#import "DYFAppLock.h"
 ```
 
 - 手势密码和TouchID/FaceID设置 (Gesture Passcode and TouchID/FaceID Settings)
 
-&nbsp;&nbsp;支持push和模态两种场景过渡 (Supporting push or modal transition)
+   支持push和模态两种场景过渡 (Supporting push or modal transition)
 
 ```
 - (IBAction)settingsAction:(id)sender {
