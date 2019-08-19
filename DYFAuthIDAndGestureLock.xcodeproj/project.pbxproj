@@ -219,8 +219,8 @@
 				14F4303C22D1983B00985437 /* Resource */,
 				96E0ED001FD68F8700420F02 /* Classes */,
 				96EFC23C1F284A86008A2FA1 /* Basic Files */,
-				960F929E1F21ABA0002367D4 /* Products */,
 				6A53685D2CF2A9A4200A7DC9 /* Frameworks */,
+				960F929E1F21ABA0002367D4 /* Products */,
 			);
 			sourceTree = "<group>";
 		};

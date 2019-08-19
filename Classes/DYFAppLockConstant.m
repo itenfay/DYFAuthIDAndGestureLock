@@ -36,10 +36,11 @@ NSString *const kGustureCodeTrackShown      = @"kGustureCodeTrackShown";
 NSString *const kSetGustureCodeText         = @"设置手势密码";
 NSString *const kVerifyGustureCodeText      = @"验证手势密码";
 NSString *const kPasswordErrorMessage       = @"手势密码错误";
+NSString *const kSettingSuccessfulText      = @"设置成功";
 
 NSString *const kPromptDefaultMessage       = @"绘制解锁图案";
 NSString *const kPromptSetAgainMessage      = @"请再次绘制解锁图案";
 NSString *const kPromptSetAgainErrorMessage = @"与上一次输入不一致，请重新设置";
 NSString *const kPromptChangeGestureMessage = @"请输入原手势密码";
-NSString *const kPromptPointShortMessage    = @"密码太短，至少3位，请重新设置";
+NSString *const kPromptPointShortMessage    = @"密码太短，至少4位，请重新设置";
 NSString *const kPromptPasswordErrorMessage = @"手势密码错误";

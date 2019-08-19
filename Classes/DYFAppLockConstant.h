@@ -1,6 +1,5 @@
 //
 //  DYFAppLockConstant.h
-//  DYFAuthIDAndGestureLock
 //
 //  Created by dyf on 2017/7/24.
 //  Copyright © 2017 dyf. All rights reserved.
@@ -44,6 +43,8 @@ FOUNDATION_EXPORT NSString *const kSetGustureCodeText;
 FOUNDATION_EXPORT NSString *const kVerifyGustureCodeText;
 // 手势密码错误
 FOUNDATION_EXPORT NSString *const kPasswordErrorMessage;
+// 设置成功
+FOUNDATION_EXPORT NSString *const kSettingSuccessfulText;
 
 // 绘制解锁图案
 FOUNDATION_EXPORT NSString *const kPromptDefaultMessage;

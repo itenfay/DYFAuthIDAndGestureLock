@@ -33,6 +33,7 @@
 
 // 屏幕大小
 #define DYFScreenBounds [UIScreen mainScreen].bounds
+
 // 屏幕宽
 #define DYFScreenWidth  DYFScreenBounds.size.width
 // 屏幕高
@@ -67,7 +68,7 @@
 // 根据RBG值转换成颜色, 格式:DYFColorFromRGB(255, 255, 255, 1.f)
 #define DYFColorFromRGB(r, g, b, alp) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:alp]
 
-// Resolving block circular reference - __weak/__block
+// Resolving block circular reference - __weak(arc)
 #ifndef DYFWeakObject
     #if __has_feature(objc_arc)
         #define DYFWeakObject(o) try {} @finally {} __weak __typeof(o) weak##_##o = o;
@@ -76,7 +77,7 @@
     #endif
 #endif
 
-// Resolving block circular reference - strong/
+// Resolving block circular reference - strong(arc)
 #ifndef DYFStrongObject
     #if __has_feature(objc_arc)
         #define DYFStrongObject(o) try {} @finally {} __strong __typeof(o) strong##_##o = weak##_##o;
@@ -85,7 +86,7 @@
     #endif
 #endif
 
-// Output Log
+// Output Logs
 #ifdef DEBUG
     #define DYFDLog(fmt, ...) NSLog((@"[file: %s] [func: %s] [line: %d] " fmt), __FILE__, __FUNCTION__, __LINE__, ##__VA_ARGS__)
 #else

@@ -220,7 +220,7 @@
     if (self.gestureSettingsType == DYFGestureSettingsTypeSet) {
         
         // 首次设置手势密码
-        if (gestureCode.length >= 3) {
+        if (gestureCode.length >= 4) {
             
             if (!self.firstGestureCode) {
                 
@@ -236,7 +236,7 @@
                 [DYFSecurityHelper setGestureCode:gestureCode];
                 
                 !self.completionHandler ?: self.completionHandler(YES);
-                [self yf_showMessage:@"设置成功"];
+                [self yf_showMessage:NSLocalizedString(kSettingSuccessfulText, nil)];
                 
                 dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.2f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                     [self back];
@@ -246,11 +246,11 @@
             }
         }
         
-        // 点数少于3 或者 前后不一致
-        if (gestureCode.length < 3 || self.firstGestureCode != nil) {
+        // 点数少于4 或者 前后不一致
+        if (gestureCode.length < 4 || self.firstGestureCode != nil) {
             
-            // 点数少于3 或者 前后不一致
-            self.messageLabel.text = NSLocalizedString(gestureCode.length < 3 ? kPromptPointShortMessage : kPromptSetAgainErrorMessage, nil);
+            // 点数少于4 或者 前后不一致
+            self.messageLabel.text = NSLocalizedString(gestureCode.length < 4 ? kPromptPointShortMessage : kPromptSetAgainErrorMessage, nil);
             self.messageLabel.textColor = DYFColorFromHex(0x000000, 1.f);
             [self.messageLabel.layer shake];
             

@@ -29,10 +29,10 @@
 #import <Foundation/Foundation.h>
 
 /**
- Touch ID/Face ID验证的回调函数
+ Touch ID/Face ID认证的回调函数
  
- @param success 验证的结果
- @param shouldEnterPassword 输入登录密码的验证
+ @param success 认证的结果
+ @param shouldEnterPassword 输入登录密码的认证
  @param message 提示信息
  */
 typedef void (^DYFAuthIDEvaluationBlock)(BOOL success, BOOL shouldEnterPassword, NSString *message);
