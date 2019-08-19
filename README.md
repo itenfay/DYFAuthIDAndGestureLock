@@ -99,3 +99,7 @@ pod 'DYFAuthIDAndGestureLock', '~> 1.0.0'
     }];
 }
 ```
+
+## Sample Codes
+
+- [Sample Codes Gateway](https://github.com/dgynfi/DYFAuthIDAndGestureLock/blob/master/Basic%20Files/ViewController.m)
