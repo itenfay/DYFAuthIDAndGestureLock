@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "DYFAuthIDAndGestureLock"
-  s.version      = "1.0.0"
+  s.version      = "1.0.1"
   s.summary      = "Gesture passcode and TouchID/FaceID unlocking."
   s.description  = <<-DESC
 	Gesture passcode unlocking and TouchID (fingerprint) / FaceID (facial features) unlocking, concise code and efficient.

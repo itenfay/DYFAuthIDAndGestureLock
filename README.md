@@ -3,28 +3,38 @@
 [![License MIT](https://img.shields.io/badge/license-MIT-green.svg?style=flat)](LICENSE)&nbsp;
 [![CocoaPods](http://img.shields.io/cocoapods/v/DYFAuthIDAndGestureLock.svg?style=flat)](http://cocoapods.org/pods/DYFAuthIDAndGestureLock)&nbsp;
 ![CocoaPods](http://img.shields.io/cocoapods/p/DYFAuthIDAndGestureLock.svg?style=flat)&nbsp;
-[![Build Status](https://travis-ci.org/dgynfi/DYFCodeScanner.svg?branch=master)](https://travis-ci.org/dgynfi/DYFAuthIDAndGestureLock)
 
 ## DYFAuthIDAndGestureLock
 
-手势密码解锁 和 TouchID（指纹）/ FaceID（面容）解锁，代码简洁，高效。(Gesture passcode unlocking and TouchID (fingerprint) / FaceID (facial features) unlocking, concise code and efficient.)
+&emsp; 手势密码解锁 和 TouchID（指纹）/ FaceID（面容）解锁，代码简洁，高效。(Gesture passcode unlocking and TouchID (fingerprint) / FaceID (facial features) unlocking, concise code and efficient.)
 
 ## 技术交流群(群号:155353383) 
 
-欢迎加入技术交流群，一起探讨技术问题。<br />
-![](https://github.com/dgynfi/DYFAuthIDAndGestureLock/raw/master/images/qq155353383.jpg)
+- 欢迎加入技术交流群，一起探讨技术问题。
+
+<div align=left>
+&emsp; <img src="https://github.com/dgynfi/DYFAuthIDAndGestureLock/raw/master/images/qq155353383.jpg" width="20%" />
+</div>
 
 ## 安装
 
 - 支持通过 CocoaPods 安装。
+
 ```pod install
-pod 'DYFAuthIDAndGestureLock', '~> 1.0.0'
+pod 'DYFAuthIDAndGestureLock', '~> 1.0.1'
+```
+
+或者
+
+```
+# Install lastest version.
+pod 'DYFAuthIDAndGestureLock'
 ```
 
 ## 效果图
 
 <div align=left>
-<img src="https://github.com/dgynfi/DYFAuthIDAndGestureLock/raw/master/images/AuthIDAndGestureLockPreview.gif" width="40%" />
+&emsp; <img src="https://github.com/dgynfi/DYFAuthIDAndGestureLock/raw/master/images/AuthIDAndGestureLockPreview.gif" width="30%" />
 </div>
 
 ## 使用说明
@@ -32,7 +42,7 @@ pod 'DYFAuthIDAndGestureLock', '~> 1.0.0'
 - 添加Face ID隐私 (Add Privacy)
 
 <div align=left>
-<img src="https://github.com/dgynfi/DYFAuthIDAndGestureLock/raw/master/images/faceid_privacy.png" width="50%" />
+&emsp; <img src="https://github.com/dgynfi/DYFAuthIDAndGestureLock/raw/master/images/faceid_privacy.png" width="50%" />
 </div>
 
 ```
@@ -48,7 +58,7 @@ pod 'DYFAuthIDAndGestureLock', '~> 1.0.0'
 
 - 手势密码和TouchID/FaceID设置 (Gesture Passcode and TouchID/FaceID Settings)
 
-   支持push和模态两种场景过渡 (Supporting push or modal transition)
+&emsp; 支持push和模态两种场景过渡 (Supporting push or modal transition)
 
 ```
 - (IBAction)settingsAction:(id)sender {
