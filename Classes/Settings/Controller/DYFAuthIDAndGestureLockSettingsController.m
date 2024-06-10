@@ -1,8 +1,8 @@
 //
 //  DYFAuthIDAndGestureLockSettingsController.m
 //
-//  Created by dyf on 2017/8/2.
-//  Copyright © 2017 dyf. All rights reserved.
+//  Created by Tenfay on 2017/8/2.
+//  Copyright © 2017 Tenfay. All rights reserved.
 //
 //  Permission is hereby granted, free of charge, to any person
 //  obtaining a copy of this software and associated documentation
@@ -127,9 +127,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *cellIdentifier = @"AGLSettingsCell";
-    
     DYFAuthIDAndGestureLockSettingsCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-    
     if (!cell) {
         cell = [[DYFAuthIDAndGestureLockSettingsCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
@@ -137,21 +135,16 @@
     [cell setNeedsLayout];
     
     if (indexPath.section == 0) {
-        
         cell.selectionStyle   = UITableViewCellSelectionStyleNone;
         cell.m_textLabel.text = @"开启密码锁定";
         cell.m_switch.on      = self.isOwnedLock;
         [cell.m_switch addTarget:self action:@selector(openPasscodeLock:) forControlEvents:UIControlEventValueChanged];
-        
     } else if (indexPath.section == 1) {
-        
         cell.selectionStyle   = UITableViewCellSelectionStyleNone;
         cell.m_textLabel.text = DYFSecurityHelper.faceIDAvailable ? @"开启Face ID解锁" : @"开启Touch ID指纹解锁";
         cell.m_switch.on      = [DYFSecurityHelper authIDOpen];
         [cell.m_switch addTarget:self action:@selector(openAuthID:) forControlEvents:UIControlEventValueChanged];
-        
     } else {
-        
         NSString *gestureCode = [DYFSecurityHelper getGestureCode];
         cell.m_textLabel.text = gestureCode.length > 0 ? @"重置手势密码" : @"设置手势密码";
         cell.m_switch.hidden  = YES;
@@ -214,7 +207,6 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end

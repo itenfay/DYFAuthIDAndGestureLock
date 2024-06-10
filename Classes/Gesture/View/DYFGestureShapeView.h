@@ -1,8 +1,8 @@
 //
 //  DYFGestureShapeView.h
 //
-//  Created by dyf on 2017/7/24.
-//  Copyright © 2017 dyf. All rights reserved.
+//  Created by Tenfay on 2017/7/24.
+//  Copyright © 2017 Tenfay. All rights reserved.
 //
 //  Permission is hereby granted, free of charge, to any person
 //  obtaining a copy of this software and associated documentation

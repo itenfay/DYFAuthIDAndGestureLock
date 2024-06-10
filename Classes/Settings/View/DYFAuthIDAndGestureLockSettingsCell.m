@@ -1,8 +1,8 @@
 //
 //  DYFAuthIDAndGestureLockSettingsCell.m
 //
-//  Created by dyf on 2017/8/2.
-//  Copyright © 2017 dyf. All rights reserved.
+//  Created by Tenfay on 2017/8/2.
+//  Copyright © 2017 Tenfay. All rights reserved.
 //
 //  Permission is hereby granted, free of charge, to any person
 //  obtaining a copy of this software and associated documentation
@@ -56,8 +56,8 @@
 }
 
 - (void)addSubviews {
-    [self addSubview:self.m_textLabel];
-    [self addSubview:self.m_switch];
+    [self.contentView addSubview:self.m_textLabel];
+    [self.contentView addSubview:self.m_switch];
 }
 
 - (void)layoutSubviews {

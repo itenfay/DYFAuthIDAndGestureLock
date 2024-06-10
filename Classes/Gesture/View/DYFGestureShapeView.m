@@ -1,8 +1,8 @@
 //
 //  DYFGestureShapeView.m
 //
-//  Created by dyf on 2017/7/24.
-//  Copyright © 2017 dyf. All rights reserved.
+//  Created by Tenfay on 2017/7/24.
+//  Copyright © 2017 Tenfay. All rights reserved.
 //
 //  Permission is hereby granted, free of charge, to any person
 //  obtaining a copy of this software and associated documentation
@@ -51,8 +51,6 @@
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
 - (void)drawRect:(CGRect)rect {
-    // Drawing code
-    
     CGContextRef cr = UIGraphicsGetCurrentContext();
     
     CGFloat squareWH = MIN(rect.size.width, rect.size.height);

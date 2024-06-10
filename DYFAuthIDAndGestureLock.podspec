@@ -1,18 +1,17 @@
 
 Pod::Spec.new do |s|
-
   s.name         = "DYFAuthIDAndGestureLock"
-  s.version      = "1.0.2"
+  s.version      = "1.1.0"
   s.summary      = "Gesture passcode and TouchID/FaceID unlocking."
   s.description  = <<-DESC
-	Gesture passcode unlocking and TouchID (fingerprint) / FaceID (facial features) unlocking, its code is concise and efficient.
-                   DESC
+  Gesture passcode unlocking and TouchID (fingerprint) / FaceID (facial features) unlocking, its code is concise and efficient.
+  DESC
 
-  s.homepage     = "https://github.com/dgynfi/DYFAuthIDAndGestureLock"
+  s.homepage     = "https://github.com/itenfay/DYFAuthIDAndGestureLock"
 
   s.license      = { :type => "MIT", :file => "LICENSE" }
 
-  s.author       = { "dyf" => "vinphy.teng@foxmail.com" }
+  s.author       = { "Tenfay" => "hansen981@126.com" }
 
   s.platform     = :ios
   s.ios.deployment_target 	= "8.0"
@@ -20,7 +19,7 @@ Pod::Spec.new do |s|
   # s.watchos.deployment_target = "2.0"
   # s.tvos.deployment_target 	= "9.0"
 
-  s.source       = { :git => "https://github.com/dgynfi/DYFAuthIDAndGestureLock.git", :tag => s.version.to_s }
+  s.source       = { :git => "https://github.com/itenfay/DYFAuthIDAndGestureLock.git", :tag => s.version.to_s }
 
   s.source_files  = "Classes/**/*.{h,m}"
   s.public_header_files = "Classes/**/*.h"
@@ -35,5 +34,4 @@ Pod::Spec.new do |s|
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # s.dependency "JSONKit", "~> 1.4"
-
 end
