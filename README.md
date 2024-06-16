@@ -25,7 +25,7 @@ pod 'DYFAuthIDAndGestureLock'
 Or
 
 ```
-pod 'DYFAuthIDAndGestureLock', '~> 1.1.0'
+pod 'DYFAuthIDAndGestureLock', '~> 1.1.1'
 ```
 
 ## Preview

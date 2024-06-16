@@ -16,7 +16,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
     self.navigationItem.title = @"App Lock";
     self.view.backgroundColor = [UIColor whiteColor];
 }
